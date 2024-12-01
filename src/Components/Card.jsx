@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Mail, Instagram, Linkedin } from 'lucide-react'
-import img1 from "../assets/logo.png"
+import img1 from "../assets/Logo.png"
 
 const CardItem = motion.a;
 
