@@ -28,7 +28,7 @@ export const Contact = ({ isHome }) => {
                 'template_xngrym3',
                 form.current, {
                 publicKey:
-                    'KoVDS5phXVc_-eXLj',
+                    'IrqMZWGpTgut6m-w4',
             })
 
             setStatus({
