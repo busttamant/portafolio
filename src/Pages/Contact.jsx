@@ -24,7 +24,7 @@ export const Contact = ({ isHome }) => {
 
         try {
             await emailjs.sendForm(
-                'service_yipl0p2',
+                'service_5l9vezn',
                 'template_xngrym3',
                 form.current, {
                 publicKey:
