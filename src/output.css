@@ -869,11 +869,6 @@ video {
   border-color: transparent;
 }
 
-.bg-\[\#111\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(17 17 17 / var(--tw-bg-opacity, 1));
-}
-
 .bg-\[\#1A1A1A\] {
   --tw-bg-opacity: 1;
   background-color: rgb(26 26 26 / var(--tw-bg-opacity, 1));
@@ -978,11 +973,6 @@ video {
 
 .leading-none {
   line-height: 1;
-}
-
-.text-\[\#ff5c28\] {
-  --tw-text-opacity: 1;
-  color: rgb(255 92 40 / var(--tw-text-opacity, 1));
 }
 
 .text-black {

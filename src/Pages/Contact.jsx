@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Send, ArrowRight, Mail, Twitter, Instagram, Dribbble } from 'lucide-react'
@@ -14,6 +14,9 @@ export const Contact = ({ isHome }) => {
         message: '',
     })
 
+    const form = useRef();
+
+
     const handleSubmit = async (e) => {
         e.preventDefault()
         setIsLoading(true)
@@ -21,11 +24,12 @@ export const Contact = ({ isHome }) => {
 
         try {
             await emailjs.sendForm(
-                'YOUR_SERVICE_ID',
-                'YOUR_TEMPLATE_ID',
-                e.target,
-                'YOUR_PUBLIC_KEY'
-            )
+                'service_yipl0p2',
+                'template_xngrym3',
+                form.current, {
+                publicKey:
+                    'KoVDS5phXVc_-eXLj',
+            })
 
             setStatus({
                 type: 'success',
@@ -33,6 +37,8 @@ export const Contact = ({ isHome }) => {
             })
             e.target.reset()
         } catch (error) {
+
+            console.error('EmailJS error:', error);
             setStatus({
                 type: 'error',
                 message: 'Failed to send message. Please try again later.',
@@ -58,7 +64,7 @@ export const Contact = ({ isHome }) => {
                     </h1>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-6 mt-3 ml-3">
+                <form ref={form} onSubmit={handleSubmit} className="space-y-6 mt-3 ml-3">
                     <motion.div
                         whileHover={{ scale: 1.03 }}
                         className="relative"
@@ -66,7 +72,7 @@ export const Contact = ({ isHome }) => {
                         <p className='mb-0.5 ml-3'>Name</p>
                         <input
                             type="text"
-                            name="name"
+                            name="user_name"
                             placeholder="Your Name"
                             required
                             className="w-full bg-transparent border border-gray-800 rounded-lg p-4  focus:outline-none focus:border-white transition-colors"
@@ -79,7 +85,7 @@ export const Contact = ({ isHome }) => {
                         <p className='mb-0.5 ml-3'>Email</p>
                         <input
                             type="email"
-                            name="email"
+                            name="user_email"
                             placeholder="Your@email.com"
                             required
                             className="w-full bg-transparent border border-gray-800 rounded-lg p-4 focus:outline-none focus:border-white transition-colors"
@@ -100,6 +106,7 @@ export const Contact = ({ isHome }) => {
                     </motion.div>
                     <motion.button
                         type="submit"
+                        value="Send"
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                         className="w-full bg-white text-black rounded-lg p-4 font-medium   flex items-center justify-center gap-2 disabled:opacity-50"
