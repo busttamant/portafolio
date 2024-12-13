@@ -1,30 +1,35 @@
 import React from 'react'
-import { Code2, Layers, ArrowRight } from 'lucide-react'
+import { Code2, Layers } from 'lucide-react'
 import { Card } from '../Components/Card'
-import { motion, useAnimate, stagger } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ProjectsSection } from '../Pages/Projects'
 import { Contact } from './Contact';
+import { Link } from 'react-router-dom';
+
+
+
 
 
 const SkillCard = ({ title, icon: Icon, color }) => (
-    <motion.div
-        whileHover={{ scale: 1.02 }}
-        className={`relative overflow-hidden rounded-xl p-6 ${color} group cursor-pointer w-full h-full`}
-    >
-        <div className="flex flex-col h-full justify-between">
-            <div>
-                <Icon className="h-8 w-8 text-white mb-4" strokeWidth={1.5} />
-                <h3 className="text-xl font-bold text-white max-w-[200px]">{title}</h3>
+    <Link to="/projects" className="block w-full h-full">
+        <motion.div
+            whileHover={{ scale: 1.02 }}
+            className={`relative overflow-hidden rounded-xl p-6 ${color} group cursor-pointer w-full h-full`}
+        >
+            <div className="flex flex-col h-full justify-between">
+                <div>
+                    <Icon className="h-8 w-8 text-white mb-4" strokeWidth={1.5} />
+                    <h3 className="text-xl font-bold text-white max-w-[200px]">{title}</h3>
+                </div>
             </div>
-            <ArrowRight className="h-6 w-6 text-white opacity-0 group-hover:opacity-100 transition-opacity self-end mt-4" />
-        </div>
-        <div className="absolute inset-0 bg-[linear-gradient(40deg,transparent_40%,rgba(255,255,255,0.1))] pointer-events-none" />
-        <div className="absolute -bottom-8 -right-8 w-32 h-32 opacity-10">
-            <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <path d="M0,0 L100,0 L100,100 L0,0 Z" fill="currentColor" />
-            </svg>
-        </div>
-    </motion.div>
+            <div className="absolute inset-0 bg-[linear-gradient(40deg,transparent_40%,rgba(255,255,255,0.1))] pointer-events-none" />
+            <div className="absolute -bottom-8 -right-8 w-32 h-32 opacity-10">
+                <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <path d="M0,0 L100,0 L100,100 L0,0 Z" fill="currentColor" />
+                </svg>
+            </div>
+        </motion.div>
+    </Link>
 )
 
 export const Home = () => {
@@ -60,12 +65,15 @@ export const Home = () => {
 
 
 
+
                         {/* Skill cards */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <SkillCard
                                 title="DYNAMIC ANIMATION, MOTION DESIGN"
                                 icon={Layers}
                                 color="bg-[#ff5c28]"
+
+
                             />
                             <SkillCard
                                 title="REACT, TAILWIND, FRAMER MOTION"

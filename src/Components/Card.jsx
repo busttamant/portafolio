@@ -17,7 +17,7 @@ export const Card = () => {
                 <img
                     src={img1}
                     alt="Daniel"
-                    className="w-48 h-48 rounded-full mb-6 border-4 border-[#ff5c28]"
+                    className="w-48 h-48 rounded-full mb-6 border-4 "
                 />
                 <h2 className="text-3xl font-bold text-white mb-2">DANIEL </h2>
                 <p className="text-gray-300 mb-8 max-w-sm mt-8" >

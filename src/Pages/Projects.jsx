@@ -1,11 +1,10 @@
 import React from "react";
 import { Card } from "../Components/Card";
-import { motion, useAnimate, stagger } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
+import { Contact } from "./Contact";
 import imgCarwash from '../assets/Carwash-Website.png'
 import imgSoccer from '../assets/Soocer-Website.png'
-import { Contact } from "./Contact";
-
 
 export const projects = [
     {

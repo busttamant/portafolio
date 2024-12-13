@@ -3,7 +3,6 @@ import { Routes, Route } from 'react-router-dom';
 import { NavBar } from './Components/NavBar';
 import { Home } from './Pages/Home';
 import { ProjectsPage } from './Pages/Projects';
-import { Experience } from './Pages/Experience';
 import { Tools } from './Pages/Tools';
 import { ContactPage } from './Pages/Contact';
 import "./App.css"

@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { House } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Folder } from 'lucide-react';
-import { Briefcase } from 'lucide-react';
 import { Wrench } from 'lucide-react';
 import { SquarePen } from 'lucide-react';
 
