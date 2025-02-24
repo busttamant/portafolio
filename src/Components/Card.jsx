@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Instagram, Linkedin } from 'lucide-react'
+import { Mail, Instagram, Linkedin, Github } from 'lucide-react'
 import img1 from "../assets/Logo.png"
 
 const CardItem = motion.a;
@@ -27,6 +27,8 @@ export const Card = () => {
                     <SocialLink href="mailto:busttamantdani@gmail.com" icon={Mail} />
                     <SocialLink href="https://www.instagram.com/busttamant/" icon={Instagram} />
                     <SocialLink href="https://www.linkedin.com/in/daniel-busttamant/" icon={Linkedin} />
+                    <SocialLink href="https://github.com/busttamant" icon={Github} />
+
                 </div>
             </motion.div>
         </div>
